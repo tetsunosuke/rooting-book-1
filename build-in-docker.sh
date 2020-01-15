@@ -3,4 +3,4 @@
 # コマンド手打ちで作業したい時は以下の通り /book に pwd がマウントされます
 # docker run -i -t -v $(pwd):/book vvakame/review /bin/bash
 
-docker run -t --rm -v $(pwd):/book vvakame/review /bin/bash -ci "cd /book && review-pdfmaker config.yml"
+docker run -t --rm -v $(pwd):/book vvakame/review:2.5 /bin/bash -ci "cd /book/articles && review-pdfmaker config.yml"
